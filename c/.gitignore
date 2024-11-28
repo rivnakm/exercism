@@ -2,3 +2,4 @@
 /**/test_*.c
 /**/.exercism
 *.out
+makefile
