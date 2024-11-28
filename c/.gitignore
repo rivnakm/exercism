@@ -1,0 +1,4 @@
+/**/test-framework
+/**/test_*.c
+/**/.exercism
+*.out
