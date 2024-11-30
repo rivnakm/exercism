@@ -2,6 +2,7 @@
 #define RESISTOR_COLOR_H
 
 #include <stdint.h>
+
 typedef enum
 {
     BLACK = 0,
