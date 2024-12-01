@@ -13,9 +13,10 @@ char **annotate(const char **minefield, const size_t rows)
     size_t columns = strlen(minefield[0]);
 
     char **result = malloc(sizeof(char *) * rows);
+    char *all_rows = malloc(rows * (columns + 1));
     for (size_t i = 0; i < rows; i++)
     {
-        result[i] = malloc(sizeof(char) * (columns + 1));
+        result[i] = &all_rows[(columns + 1) * i];
         strcpy(result[i], minefield[i]);
     }
 
@@ -54,9 +55,8 @@ char **annotate(const char **minefield, const size_t rows)
     return result;
 }
 
-// FIXME: Can't properly free memory with this function signature,
-// needs an upstream change to pass `make memtest`
 void free_annotation(char **annotation)
 {
+    free(annotation[0]);
     free(annotation);
 }
