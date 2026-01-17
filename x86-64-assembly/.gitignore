@@ -1,0 +1,10 @@
+# Exercism tests
+*_test.c
+
+# Exercism files
+.exercism/
+vendor/
+
+# Object files
+*.o
+tests
