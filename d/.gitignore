@@ -1,0 +1,4 @@
+*.o
+
+# Exercism files
+.exercism/
